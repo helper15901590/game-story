@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">NFC 数据结构</title>
+  <desc id="desc">NTAG216 按 4 字节一页存储：页 04 为故事元数据，页 05 起每个主线节点占一页，页 E3 到 E6 为密码配置。</desc>
+
+  <rect width="1200" height="820" fill="#FAF7EF"/>
+
+  <text x="64" y="62" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="30" font-weight="700" fill="#14261F">NFC 数据结构</text>
+  <text x="64" y="92" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#5B6B62">NTAG216 · 4 字节一页 · 一张卡就是一整棵剧情树</text>
+
+  <text x="64" y="134" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#8A7A62">页地址（十六进制）</text>
+
+  <!-- Memory strip -->
+  <g font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="64" y="150" width="200" height="84" rx="10" fill="#EFEBE2" stroke="#D8CEBB"/>
+    <text x="164" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#4A4A42">00–03</text>
+    <text x="164" y="210" text-anchor="middle" font-size="12" fill="#7A7468">UID / 厂家信息</text>
+
+    <rect x="280" y="150" width="128" height="84" rx="10" fill="#F2C94C" stroke="#D9A81F"/>
+    <text x="344" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#3A2E08">04</text>
+    <text x="344" y="210" text-anchor="middle" font-size="12" fill="#5A4A12">故事元数据</text>
+
+    <rect x="424" y="150" width="100" height="84" rx="10" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="474" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#17452F">05</text>
+    <text x="474" y="210" text-anchor="middle" font-size="12" fill="#3E6B58">M1</text>
+
+    <rect x="536" y="150" width="100" height="84" rx="10" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="586" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#17452F">06</text>
+    <text x="586" y="210" text-anchor="middle" font-size="12" fill="#3E6B58">M2</text>
+
+    <rect x="648" y="150" width="100" height="84" rx="10" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="698" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#17452F">07</text>
+    <text x="698" y="210" text-anchor="middle" font-size="12" fill="#3E6B58">M3</text>
+
+    <rect x="760" y="150" width="100" height="84" rx="10" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="810" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#17452F">08</text>
+    <text x="810" y="210" text-anchor="middle" font-size="12" fill="#3E6B58">M4</text>
+
+    <rect x="872" y="150" width="96" height="84" rx="10" fill="#FFFDF7" stroke="#C9BFA9" stroke-dasharray="5 4"/>
+    <text x="920" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#8A7A62">09…</text>
+    <text x="920" y="210" text-anchor="middle" font-size="12" fill="#8A7A62">更多节点</text>
+
+    <rect x="984" y="150" width="152" height="84" rx="10" fill="#F6DCD3" stroke="#D99A82"/>
+    <text x="1060" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#6B2A16">E3–E6</text>
+    <text x="1060" y="210" text-anchor="middle" font-size="12" fill="#8A4A33">密码 / 配置</text>
+  </g>
+  <g font-family="'Trebuchet MS',sans-serif" font-size="10" fill="#A3988A">
+    <text x="164" y="252" text-anchor="middle">4 B / 页</text>
+    <text x="344" y="252" text-anchor="middle">4 B</text>
+    <text x="474" y="252" text-anchor="middle">4 B</text>
+    <text x="586" y="252" text-anchor="middle">4 B</text>
+    <text x="698" y="252" text-anchor="middle">4 B</text>
+    <text x="810" y="252" text-anchor="middle">4 B</text>
+    <text x="1060" y="252" text-anchor="middle">配置页</text>
+  </g>
+
+  <!-- Page 04 zoom -->
+  <rect x="64" y="296" width="520" height="212" rx="14" fill="#FFFDF7" stroke="#D8CEBB"/>
+  <text x="84" y="328" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#1F3028">页 04 · 故事元数据</text>
+  <text x="84" y="350" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#7A7468">故事编号用 BCD，其余用十六进制</text>
+
+  <g font-family="'Trebuchet MS','Noto Sans SC',sans-serif">
+    <rect x="84" y="366" width="104" height="82" rx="8" fill="#FFF3C9" stroke="#E4C96B"/>
+    <text x="136" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#3A2E08">00</text>
+    <text x="136" y="430" text-anchor="middle" font-size="11" fill="#6B5C1E">故事号 高</text>
+
+    <rect x="198" y="366" width="104" height="82" rx="8" fill="#FFF3C9" stroke="#E4C96B"/>
+    <text x="250" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#3A2E08">01</text>
+    <text x="250" y="430" text-anchor="middle" font-size="11" fill="#6B5C1E">故事号 低</text>
+
+    <rect x="312" y="366" width="104" height="82" rx="8" fill="#FFFDF7" stroke="#D8CEBB"/>
+    <text x="364" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#1F3028">07</text>
+    <text x="364" y="430" text-anchor="middle" font-size="11" fill="#7A7468">主音频数量</text>
+
+    <rect x="426" y="366" width="104" height="82" rx="8" fill="#F1EEE6" stroke="#D8CEBB"/>
+    <text x="478" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#5B564C">00</text>
+    <text x="478" y="430" text-anchor="middle" font-size="11" fill="#7A7468">模式 / 保留</text>
+  </g>
+  <text x="84" y="482" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#3E6B58">→ 故事 0001，共 7 条主音频（4 个 M + 3 个 E），对应 TF 文件夹 00001</text>
+
+  <!-- Page 05 zoom -->
+  <rect x="616" y="296" width="520" height="212" rx="14" fill="#FFFDF7" stroke="#D8CEBB"/>
+  <text x="636" y="328" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#1F3028">页 05 · M1 节点表（小红帽示例）</text>
+  <text x="636" y="350" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#7A7468">第 2 字节身兼两职：有选项时是 O1，无选项时是下一 M</text>
+
+  <g font-family="'Trebuchet MS','Noto Sans SC',sans-serif">
+    <rect x="636" y="366" width="104" height="82" rx="8" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="688" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#17452F">02</text>
+    <text x="688" y="430" text-anchor="middle" font-size="11" fill="#3E6B58">选项数</text>
+
+    <rect x="750" y="366" width="104" height="82" rx="8" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="802" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#17452F">03</text>
+    <text x="802" y="430" text-anchor="middle" font-size="11" fill="#3E6B58">O1 → M3</text>
+
+    <rect x="864" y="366" width="104" height="82" rx="8" fill="#DDF1E6" stroke="#8FC9AE"/>
+    <text x="916" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#17452F">02</text>
+    <text x="916" y="430" text-anchor="middle" font-size="11" fill="#3E6B58">O2 → M2</text>
+
+    <rect x="978" y="366" width="104" height="82" rx="8" fill="#F1EEE6" stroke="#D8CEBB"/>
+    <text x="1030" y="404" text-anchor="middle" font-size="26" font-weight="700" fill="#5B564C">00</text>
+    <text x="1030" y="430" text-anchor="middle" font-size="11" fill="#7A7468">O3 空</text>
+  </g>
+  <text x="636" y="482" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#3E6B58">→ 2 个选项：O1 跳 M3，O2 跳 M2</text>
+
+  <!-- How to read -->
+  <text x="64" y="568" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#1F3028">跳转表怎么读</text>
+  <text x="64" y="592" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#7A7468">每一行 = 一个节点页的 4 字节；跳转目标写节点号（= 音频文件前三位）</text>
+
+  <g font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#8A7A62">
+    <text x="64" y="626">页 · 节点</text>
+    <text x="220" y="626">4 字节数据</text>
+    <text x="430" y="626">含义</text>
+  </g>
+  <line x1="64" y1="636" x2="1136" y2="636" stroke="#D8CEBB"/>
+
+  <g font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#1F3028">
+    <rect x="64" y="650" width="112" height="30" rx="15" fill="#DDF1E6"/>
+    <text x="120" y="670" text-anchor="middle" font-size="13" fill="#17452F">05 · M1</text>
+    <text x="220" y="671" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#17452F">02 03 02 00</text>
+    <text x="430" y="671">2 个选项：O1 → M3，O2 → M2</text>
+
+    <rect x="64" y="690" width="112" height="30" rx="15" fill="#DDF1E6"/>
+    <text x="120" y="710" text-anchor="middle" font-size="13" fill="#17452F">06 · M2</text>
+    <text x="220" y="711" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#17452F">00 04 00 00</text>
+    <text x="430" y="711">无选项，线性播放到 M4</text>
+
+    <rect x="64" y="730" width="112" height="30" rx="15" fill="#DDF1E6"/>
+    <text x="120" y="750" text-anchor="middle" font-size="13" fill="#17452F">08 · M4</text>
+    <text x="220" y="751" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#17452F">03 07 06 05</text>
+    <text x="430" y="751">3 个选项：O1 → E3，O2 → E2，O3 → E1</text>
+
+    <rect x="64" y="770" width="112" height="30" rx="15" fill="#F6DCD3"/>
+    <text x="120" y="790" text-anchor="middle" font-size="13" fill="#6B2A16">09 · E1</text>
+    <text x="220" y="791" font-family="'Consolas','Courier New',monospace" font-size="16" fill="#6B2A16">00 00 00 00</text>
+    <text x="430" y="791" fill="#6B2A16">终止节点：播完 SYSTE/0011 剧终音效</text>
+  </g>
+</svg>

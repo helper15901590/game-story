@@ -1,0 +1,16 @@
+# Keil build output
+Output/
+LST/
+*.obj
+*.lst
+*.m51
+*.lnp
+*.build_log.htm
+*.uvgui.*
+*.uvopt
+*.bak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">冒险故事机 Story Machine</title>
+  <desc id="desc">开源 NFC 互动故事机：一张卡，一个世界。</desc>
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#2A4C3F" opacity="0.55"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A21"/>
+      <stop offset="1" stop-color="#123A2C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect width="1200" height="400" fill="url(#dots)"/>
+  <circle cx="1000" cy="190" r="270" fill="#173B2F" opacity="0.55"/>
+
+  <!-- Left: wordmark -->
+  <text x="72" y="78" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="15" letter-spacing="2.5" fill="#F2C94C">开源硬件 · 开源固件 · 离线运行</text>
+  <text x="72" y="162" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="64" font-weight="700" fill="#FFF6E5">冒险故事机</text>
+  <text x="74" y="204" font-family="'Trebuchet MS','Noto Sans SC',sans-serif" font-size="25" letter-spacing="7" fill="#F2C94C">STORY MACHINE</text>
+  <text x="72" y="252" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-size="19" fill="#CFE3D6">一张卡，一个世界。转动旋钮，让故事跟着孩子走。</text>
+
+  <!-- Badges -->
+  <g font-family="'Trebuchet MS','Noto Sans SC',sans-serif" font-size="14" fill="#DDEBE1">
+    <rect x="72" y="304" width="186" height="38" rx="19" fill="none" stroke="#3C6B58"/>
+    <text x="165" y="328" text-anchor="middle">8051 · MS51EC0AE</text>
+    <rect x="272" y="304" width="160" height="38" rx="19" fill="none" stroke="#3C6B58"/>
+    <text x="352" y="328" text-anchor="middle">NFC · NTAG216</text>
+    <rect x="446" y="304" width="216" height="38" rx="19" fill="none" stroke="#3C6B58"/>
+    <text x="554" y="328" text-anchor="middle">Audio · WT2003H4-16S</text>
+    <rect x="676" y="304" width="132" height="38" rx="19" fill="none" stroke="#3C6B58"/>
+    <text x="742" y="328" text-anchor="middle">MIT License</text>
+  </g>
+
+  <!-- Right: story card -->
+  <g transform="rotate(-8 930 190)">
+    <rect x="856" y="86" width="152" height="214" rx="18" fill="#F2C94C"/>
+    <circle cx="932" cy="110" r="7" fill="#0E2A21"/>
+    <rect x="878" y="136" width="108" height="8" rx="4" fill="#0E2A21" opacity="0.22"/>
+    <rect x="878" y="154" width="76" height="8" rx="4" fill="#0E2A21" opacity="0.16"/>
+    <g fill="none" stroke="#0E2A21" stroke-width="3" opacity="0.85">
+      <circle cx="900" cy="214" r="9"/>
+      <circle cx="958" cy="196" r="9"/>
+      <circle cx="958" cy="246" r="9"/>
+      <path d="M909 211 L949 199"/>
+      <path d="M909 220 L949 241"/>
+    </g>
+    <text x="882" y="284" font-family="'Trebuchet MS',sans-serif" font-size="12" letter-spacing="2.5" fill="#0E2A21">STORY 01</text>
+  </g>
+
+  <!-- NFC waves -->
+  <g fill="none" stroke="#7FD1AE" stroke-linecap="round">
+    <path d="M1016 156 A 34 34 0 0 1 1016 224" stroke-width="5" opacity="0.85"/>
+    <path d="M1036 140 A 58 58 0 0 1 1036 240" stroke-width="5" opacity="0.55"/>
+    <path d="M1056 124 A 82 82 0 0 1 1056 256" stroke-width="5" opacity="0.3"/>
+  </g>
+
+  <!-- Knob -->
+  <g>
+    <circle cx="1096" cy="308" r="46" fill="#E4572E"/>
+    <circle cx="1096" cy="308" r="29" fill="#FFF6E5"/>
+    <path d="M1096 286 L1096 269" stroke="#FFF6E5" stroke-width="7" stroke-linecap="round"/>
+    <g fill="#F2C94C">
+      <circle cx="1096" cy="248" r="3.5"/>
+      <circle cx="1127" cy="269" r="2.6" opacity="0.7"/>
+      <circle cx="1065" cy="269" r="2.6" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- waveform -->
+  <g stroke="#7FD1AE" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <path d="M846 344 L862 344 L872 330 L882 356 L892 320 L902 360 L912 338 L922 348 L932 344"/>
+  </g>
+</svg>
